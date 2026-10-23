@@ -1,0 +1,26 @@
+{
+  "name": "agent-harness-small",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stage 1 of a from-scratch agent harness: one model, a tool loop, and a trace.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "agent": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
